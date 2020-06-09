@@ -1,2 +1,1 @@
 RPi.GPIO
-https://github.com/google/aiyprojects-raspbian.git
