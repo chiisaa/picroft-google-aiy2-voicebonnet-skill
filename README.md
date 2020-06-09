@@ -29,7 +29,7 @@ sh mycroft-core/skills/picroft-google-aiy2-voicebonnet-skill.chiisaa/install_AIY
 
 
 This script will add google's AIY repositories, update and install the necessary drivers and reconfigure the Pi to enable the board.
-You need to do a reboot afterwards.
+Be prepared, this will take a while depending on your internet connection.  Once it is finished, you need to reboot.
 
 ## Category
 **IoT**
