@@ -11,7 +11,7 @@ The button LED turns on when Mycroft is listening. If button is pressed he begin
 This skill is made for Picroft Buster Keaton which is Picroft on Rasbian Buster.
 Once the skill is installed the script AIY2_install.sh must be run to load the voicebonnet python libraries that enable the LED.
 
-### Installing the AIY voicekit
+### Installing the AIY2 voicebonnet
 It is best to install and refuse guided setup, register the device, perform the upgrades, then install the skill:
 
 
