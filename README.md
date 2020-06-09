@@ -25,6 +25,7 @@ You need to do a reboot afterwards.
 
 ## Credits
 Chip Isaacks (@chiisaa)
+Thanks to Andreas Lorensen (@andlo) for doing the heavy lifting
 
 ## Supported Devices
 platform_picroft
