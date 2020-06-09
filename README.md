@@ -12,9 +12,11 @@ This skill is made for Picroft Buster Keaton which is Picroft on Rasbian Buster.
 Once the skill is installed the script AIY2_install.sh must be run to load the voicebonnet python libraries that enable the LED.
 
 ### Installing the AIY voicekit
-It is best to install and refuse guided setup, register the device, perform the upgrades, then
-
-run
+It is best to install and refuse guided setup, register the device, perform the upgrades, then install the skill:
+'''
+msm install https://github.com/chiisaa/picroft-google-aiy2-voicebonnet-skill.git
+'''
+Once the skill is installed, then run
 ```
 sh mycroft-core/skills/picroft-google-aiy2-voicebonnet-skill.chiisaa/install_AIY2.sh
 ```
