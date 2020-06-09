@@ -1,0 +1,3 @@
+RPi.GPIO
+python3-pip
+AIY-projects-python
