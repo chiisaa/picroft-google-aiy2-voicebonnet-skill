@@ -13,13 +13,21 @@ Once the skill is installed the script AIY2_install.sh must be run to load the v
 
 ### Installing the AIY voicekit
 It is best to install and refuse guided setup, register the device, perform the upgrades, then install the skill:
-'''
+
+
+```
 msm install https://github.com/chiisaa/picroft-google-aiy2-voicebonnet-skill.git
-'''
+```
+
+
 Once the skill is installed, then run
+
+
 ```
 sh mycroft-core/skills/picroft-google-aiy2-voicebonnet-skill.chiisaa/install_AIY2.sh
 ```
+
+
 This script will add google's AIY repositories, update and install the necessary drivers and reconfigure the Pi to enable the board.
 You need to do a reboot afterwards.
 
