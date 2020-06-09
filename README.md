@@ -16,7 +16,7 @@ It is best to install and refuse guided setup, register the device, perform the 
 
 run
 ```
-install_AIY2.sh
+sh mycroft-core/skills/picroft-google-aiy2-voicebonnet-skill.chiisaa/install_AIY2.sh
 ```
 This script will add google's AIY repositories, update and install the necessary drivers and reconfigure the Pi to enable the board.
 You need to do a reboot afterwards.
