@@ -1,2 +1,2 @@
 RPi.GPIO
-AIY-projects-python
+aiy.leds
