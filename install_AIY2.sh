@@ -10,6 +10,21 @@ echo "Updating and upgrading..."
 sudo apt-get -y update
 sudo apt-get -y upgrade
 
+echo "Installing pip3"
+sudo apt-get -y install python3-pip
+sudo /home/pi/mycroft-core/.venv/bin/python -m pip install --upgrade pip
+
+echo "Installing AIY Python Library"
+sudo apt-get install -y git
+git clone https://github.com/google/aiyprojects-raspbian.git AIY-projects-python
+sudo pip3 install -e AIY-projects-python
+cd AIY-projects-python
+sudo cp -R src/aiy /home/pi/mycroft-core/.venv/lib/python3.7/site-packages/aiy
+cd ..
+
+echo "Installing RPi.GPIO"
+sudo pip3 install RPi.GPIO
+
 echo "installing what is needed..."
 # hack to get aiy-io-mcu-firmware to be installed
 sudo mkdir /usr/lib/systemd/system
@@ -19,9 +34,6 @@ sudo apt-get -y install aiy-dkms aiy-voicebonnet-soundcard-dkms aiy-voicebonnet-
 # this does for the moment gives problems on Picroft, and we (maybe) dont need it
 #sudo apt-get -y install aiy-python-wheels
 sudo apt-get -y install leds-ktd202x-dkms pwm-soft-dkms
-
-echo "Installing Voice Bonnet packages"
-sudo apt-get install -y aiy-voicebonnet-soundcard-dkms
 
 echo "Disabling built-in audio"
 sudo sed -i -e "s/^dtparam=audio=on/#\0/" /boot/config.txt
@@ -61,21 +73,6 @@ else
   echo "defaults.pcm.card 0" | sudo tee --append /etc/asound.conf
   echo "defaults.pcm.device 0" |sudo tee --append /etc/asound.conf
 fi
-
-echo "Installing pip3"
-sudo apt-get -y install python3-pip
-sudo /home/pi/mycroft-core/.venv/bin/python -m pip install --upgrade pip
-
-echo "Installing AIY Python Library"
-sudo apt-get install -y git
-git clone https://github.com/google/aiyprojects-raspbian.git AIY-projects-python
-sudo pip3 install -e AIY-projects-python
-cd AIY-projects-python
-sudo cp -R src/aiy /home/pi/mycroft-core/.venv/lib/python3.7/site-packages/aiy
-cd ..
-
-echo "Installing RPi.GPIO"
-sudo pip install RPi.GPIO
 
 echo "Rebuild venv..."
 # rebuild venv
