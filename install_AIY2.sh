@@ -30,7 +30,7 @@ echo "installing what is needed..."
 sudo mkdir /usr/lib/systemd/system
 
 sudo apt-get -y install aiy-dkms aiy-io-mcu-firmware aiy-vision-firmware dkms raspberrypi-kernel-headers
-sudo apt-get -y install aiy-dkms aiy-voicebonnet-soundcard-dkms aiy-voicebonnet-routes
+sudo apt-get -y install aiy-dkms aiy-voicebonnet-soundcard-dkms
 # this does for the moment gives problems on Picroft, and we (maybe) dont need it
 #sudo apt-get -y install aiy-python-wheels
 sudo apt-get -y install leds-ktd202x-dkms pwm-soft-dkms
