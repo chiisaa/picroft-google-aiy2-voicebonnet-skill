@@ -73,6 +73,7 @@ else
   echo "defaults.pcm.device 0" |sudo tee --append /etc/asound.conf
 fi
 
+echo "Installing the soundcard drivers..."
 sudo apt-get -y install aiy-dkms aiy-voicebonnet-soundcard-dkms
 
 echo "Rebuild venv..."
