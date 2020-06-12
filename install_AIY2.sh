@@ -30,7 +30,6 @@ echo "installing what is needed..."
 sudo mkdir /usr/lib/systemd/system
 
 sudo apt-get -y install aiy-dkms aiy-io-mcu-firmware aiy-vision-firmware dkms raspberrypi-kernel-headers
-sudo apt-get -y install aiy-dkms aiy-voicebonnet-soundcard-dkms
 # this does for the moment gives problems on Picroft, and we (maybe) dont need it
 #sudo apt-get -y install aiy-python-wheels
 sudo apt-get -y install leds-ktd202x-dkms pwm-soft-dkms
@@ -73,6 +72,8 @@ else
   echo "defaults.pcm.card 0" | sudo tee --append /etc/asound.conf
   echo "defaults.pcm.device 0" |sudo tee --append /etc/asound.conf
 fi
+
+sudo apt-get -y install aiy-dkms aiy-voicebonnet-soundcard-dkms
 
 echo "Rebuild venv..."
 # rebuild venv
